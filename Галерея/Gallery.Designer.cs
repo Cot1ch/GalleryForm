@@ -39,6 +39,7 @@
             this.lblAllImages = new System.Windows.Forms.Label();
             this.tableLPLeftMain = new System.Windows.Forms.TableLayoutPanel();
             this.tableLPLeftBott = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRewriteDefFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pBImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,18 +47,19 @@
             // 
             this.lboxChooseImage.FormattingEnabled = true;
             this.lboxChooseImage.ItemHeight = 16;
-            this.lboxChooseImage.Location = new System.Drawing.Point(25, 43);
+            this.lboxChooseImage.Location = new System.Drawing.Point(25, 377);
             this.lboxChooseImage.Name = "lboxChooseImage";
-            this.lboxChooseImage.Size = new System.Drawing.Size(360, 228);
+            this.lboxChooseImage.ScrollAlwaysVisible = true;
+            this.lboxChooseImage.Size = new System.Drawing.Size(750, 52);
             this.lboxChooseImage.TabIndex = 0;
             this.lboxChooseImage.Visible = false;
             this.lboxChooseImage.SelectedIndexChanged += new System.EventHandler(this.lboxChooseImage_SelectedIndexChanged);
             // 
             // pBImage
             // 
-            this.pBImage.Location = new System.Drawing.Point(414, 24);
+            this.pBImage.Location = new System.Drawing.Point(307, 24);
             this.pBImage.Name = "pBImage";
-            this.pBImage.Size = new System.Drawing.Size(360, 400);
+            this.pBImage.Size = new System.Drawing.Size(468, 335);
             this.pBImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBImage.TabIndex = 1;
             this.pBImage.TabStop = false;
@@ -66,9 +68,9 @@
             // 
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLoad.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLoad.Location = new System.Drawing.Point(25, 369);
+            this.btnLoad.Location = new System.Drawing.Point(25, 157);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(170, 55);
+            this.btnLoad.Size = new System.Drawing.Size(265, 55);
             this.btnLoad.TabIndex = 2;
             this.btnLoad.Text = "Выбрать .txt файл";
             this.btnLoad.UseVisualStyleBackColor = false;
@@ -78,11 +80,11 @@
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(215, 369);
+            this.btnSave.Location = new System.Drawing.Point(25, 218);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(170, 55);
+            this.btnSave.Size = new System.Drawing.Size(265, 55);
             this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Сохранить";
+            this.btnSave.Text = "Сохранить изменения";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -90,10 +92,10 @@
             // txtCurrImageName
             // 
             this.txtCurrImageName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCurrImageName.Location = new System.Drawing.Point(25, 295);
+            this.txtCurrImageName.Location = new System.Drawing.Point(25, 43);
             this.txtCurrImageName.Multiline = true;
             this.txtCurrImageName.Name = "txtCurrImageName";
-            this.txtCurrImageName.Size = new System.Drawing.Size(360, 22);
+            this.txtCurrImageName.Size = new System.Drawing.Size(265, 22);
             this.txtCurrImageName.TabIndex = 4;
             this.txtCurrImageName.Visible = false;
             this.txtCurrImageName.TextChanged += new System.EventHandler(this.txtCurrFileName_TextChanged);
@@ -102,7 +104,7 @@
             // 
             this.lblCurrImageName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCurrImageName.AutoSize = true;
-            this.lblCurrImageName.Location = new System.Drawing.Point(22, 276);
+            this.lblCurrImageName.Location = new System.Drawing.Point(22, 24);
             this.lblCurrImageName.Name = "lblCurrImageName";
             this.lblCurrImageName.Size = new System.Drawing.Size(139, 16);
             this.lblCurrImageName.TabIndex = 5;
@@ -111,7 +113,6 @@
             // 
             // openFD
             // 
-            this.openFD.FileName = "openFileDialog1";
             this.openFD.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             // 
             // saveFD
@@ -121,29 +122,56 @@
             // lblAllImages
             // 
             this.lblAllImages.AutoSize = true;
-            this.lblAllImages.Location = new System.Drawing.Point(22, 24);
+            this.lblAllImages.Location = new System.Drawing.Point(22, 343);
             this.lblAllImages.Name = "lblAllImages";
             this.lblAllImages.Size = new System.Drawing.Size(173, 16);
             this.lblAllImages.TabIndex = 6;
             this.lblAllImages.Text = "Доступные изображения:";
             this.lblAllImages.Visible = false;
             // 
-            // Form1
+            // tableLPLeftMain
+            // 
+            this.tableLPLeftMain.Location = new System.Drawing.Point(0, 0);
+            this.tableLPLeftMain.Name = "tableLPLeftMain";
+            this.tableLPLeftMain.Size = new System.Drawing.Size(200, 100);
+            this.tableLPLeftMain.TabIndex = 0;
+            // 
+            // tableLPLeftBott
+            // 
+            this.tableLPLeftBott.Location = new System.Drawing.Point(0, 0);
+            this.tableLPLeftBott.Name = "tableLPLeftBott";
+            this.tableLPLeftBott.Size = new System.Drawing.Size(200, 100);
+            this.tableLPLeftBott.TabIndex = 0;
+            // 
+            // btnRewriteDefFile
+            // 
+            this.btnRewriteDefFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRewriteDefFile.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRewriteDefFile.Location = new System.Drawing.Point(25, 279);
+            this.btnRewriteDefFile.Name = "btnRewriteDefFile";
+            this.btnRewriteDefFile.Size = new System.Drawing.Size(265, 28);
+            this.btnRewriteDefFile.TabIndex = 7;
+            this.btnRewriteDefFile.Text = "Перезаписать дефолтный файл";
+            this.btnRewriteDefFile.UseVisualStyleBackColor = false;
+            this.btnRewriteDefFile.Click += new System.EventHandler(this.ChangeDefaultPaths);
+            // 
+            // Gallery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRewriteDefFile);
             this.Controls.Add(this.lblAllImages);
             this.Controls.Add(this.lblCurrImageName);
             this.Controls.Add(this.txtCurrImageName);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.pBImage);
             this.Controls.Add(this.lboxChooseImage);
+            this.Controls.Add(this.pBImage);
             this.MaximizeBox = false;
-            this.Name = "Галерея";
+            this.Name = "Gallery";
             this.Text = "Галерея";
             ((System.ComponentModel.ISupportInitialize)(this.pBImage)).EndInit();
             this.ResumeLayout(false);
@@ -164,6 +192,7 @@
         private System.Windows.Forms.Label lblAllImages;
         private System.Windows.Forms.TableLayoutPanel tableLPLeftMain;
         private System.Windows.Forms.TableLayoutPanel tableLPLeftBott;
+        private System.Windows.Forms.Button btnRewriteDefFile;
     }
 }
 
