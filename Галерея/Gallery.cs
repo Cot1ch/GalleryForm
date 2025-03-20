@@ -55,6 +55,7 @@ namespace Галерея
             lblCurrImageName.Visible = true;
             txtCurrImageName.Visible = true;
             lboxChooseImage.Visible = true;
+            btnRewriteDefFile.Visible = true;
         }
 
         /// <summary>
@@ -130,6 +131,9 @@ namespace Галерея
             namesAndPaths[lboxChooseImage.SelectedItem.ToString()] = txtCurrImageName.Text;
         }
 
+        /// <summary>
+        /// Метод перезаписывает пути к дефолтным фотографиям в дефолтом файле (images\Images.txt)
+        /// </summary>
         private void ChangeDefaultPaths(object sender, EventArgs e)
         {
             string path = $"{Directory.GetCurrentDirectory()}\\..\\..\\..\\images\\Images.txt";
@@ -143,9 +147,8 @@ namespace Галерея
             {
                 images[i] = $"{Directory.GetCurrentDirectory()}\\..\\..\\..\\..images.{images[i].Substring(images[i].LastIndexOf('\\') + 1)}";
             }
+            btnRewriteDefFile.Visible = false;
             MessageBox.Show("Файл успешно перезаписан");
-        }
-
-        
+        }        
     }
 }

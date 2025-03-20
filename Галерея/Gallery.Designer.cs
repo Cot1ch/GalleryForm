@@ -153,6 +153,7 @@
             this.btnRewriteDefFile.TabIndex = 7;
             this.btnRewriteDefFile.Text = "Перезаписать дефолтный файл";
             this.btnRewriteDefFile.UseVisualStyleBackColor = false;
+            this.btnRewriteDefFile.Visible = false;
             this.btnRewriteDefFile.Click += new System.EventHandler(this.ChangeDefaultPaths);
             // 
             // Gallery
