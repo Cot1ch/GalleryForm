@@ -27,7 +27,7 @@ namespace Галерея
 
             foreach (var kv in namesAndPaths)
             {
-                File.AppendAllText(fileName, $"{kv.Key}, {kv.Value}\n");
+                File.AppendAllText(fileName, $"{kv.Key},{kv.Value}\n");
             }
 
             MessageBox.Show("Файл успешно сохранён");
@@ -46,7 +46,7 @@ namespace Галерея
         }
 
         /// <summary>
-        /// Метод меняет свойство Visibility для ненужных на старте контролов
+        /// Метод меняет свойство Visibility для ненужных на старте контролов. Для красоты
         /// </summary>
         private void ChangeVisibility()
         {
@@ -106,9 +106,6 @@ namespace Галерея
                     "Отображаются только последние вхождения");
             }    
             
-        }
-        private void lboxChooseImage_SelectedIndexChanged(object sender, EventArgs e)
-        {
         }
 
         /// <summary>

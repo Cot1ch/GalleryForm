@@ -37,8 +37,6 @@
             this.openFD = new System.Windows.Forms.OpenFileDialog();
             this.saveFD = new System.Windows.Forms.SaveFileDialog();
             this.lblAllImages = new System.Windows.Forms.Label();
-            this.tableLPLeftMain = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLPLeftBott = new System.Windows.Forms.TableLayoutPanel();
             this.btnRewriteDefFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pBImage)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +51,6 @@
             this.lboxChooseImage.Size = new System.Drawing.Size(750, 52);
             this.lboxChooseImage.TabIndex = 0;
             this.lboxChooseImage.Visible = false;
-            this.lboxChooseImage.SelectedIndexChanged += new System.EventHandler(this.lboxChooseImage_SelectedIndexChanged);
             // 
             // pBImage
             // 
@@ -129,20 +126,6 @@
             this.lblAllImages.Text = "Доступные изображения:";
             this.lblAllImages.Visible = false;
             // 
-            // tableLPLeftMain
-            // 
-            this.tableLPLeftMain.Location = new System.Drawing.Point(0, 0);
-            this.tableLPLeftMain.Name = "tableLPLeftMain";
-            this.tableLPLeftMain.Size = new System.Drawing.Size(200, 100);
-            this.tableLPLeftMain.TabIndex = 0;
-            // 
-            // tableLPLeftBott
-            // 
-            this.tableLPLeftBott.Location = new System.Drawing.Point(0, 0);
-            this.tableLPLeftBott.Name = "tableLPLeftBott";
-            this.tableLPLeftBott.Size = new System.Drawing.Size(200, 100);
-            this.tableLPLeftBott.TabIndex = 0;
-            // 
             // btnRewriteDefFile
             // 
             this.btnRewriteDefFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -191,8 +174,6 @@
         private System.Windows.Forms.OpenFileDialog openFD;
         private System.Windows.Forms.SaveFileDialog saveFD;
         private System.Windows.Forms.Label lblAllImages;
-        private System.Windows.Forms.TableLayoutPanel tableLPLeftMain;
-        private System.Windows.Forms.TableLayoutPanel tableLPLeftBott;
         private System.Windows.Forms.Button btnRewriteDefFile;
     }
 }
